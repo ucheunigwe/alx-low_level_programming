@@ -1,14 +1,32 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int n;
+	char n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+	n = 'a';
 	/* your code goes there */
+	while (n <= 'z')
+	{
+		putchar(n);
+		n++;
+	}
+	n = 'A';
+        /* your code goes there */
+        while (n <= 'Z')
+        {
+                putchar(n);
+                n++;
+        }
+	putchar('\n');
 	return (0);
 }

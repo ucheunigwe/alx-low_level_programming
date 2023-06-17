@@ -21,12 +21,12 @@ int main(void)
 		n++;
 	}
 	n = 'A';
-        /* your code goes there */
-        while (n <= 'Z')
-        {
-                putchar(n);
-                n++;
-        }
+	/* your code goes there */
+	while (n <= 'Z')
+	{
+		putchar(n);
+		n++;
+	}
 	putchar('\n');
 	return (0);
 }

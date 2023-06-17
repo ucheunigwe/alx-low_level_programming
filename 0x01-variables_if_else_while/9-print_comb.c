@@ -15,7 +15,7 @@ int main(void)
 
 	n = 48;
 	/* your code goes there */
-	while (n < 59)
+	while (n < 58)
 	{
 		putchar(n);
 		if (n < 57)

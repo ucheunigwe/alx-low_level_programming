@@ -12,6 +12,6 @@ int main(void)
 {
 
 	/* your code goes there */
-	puts("_putchar")
+	puts("_putchar");
 	return (0);
 }

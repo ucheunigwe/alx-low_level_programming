@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <ctype.h>
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
@@ -9,5 +9,8 @@
  */
 int _islower(int c)
 {
-	return islower(c)
+	int r;
+	
+	r = islower(c);
+	return r;
 }

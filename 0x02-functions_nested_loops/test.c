@@ -5,7 +5,8 @@
 /**
  * _islower - Entry point
  *
- * Return: Always int
+ * Return: On sucess 1.
+ * On failure, -1
  * @c: Param
  */
 int _islower(int c)
@@ -15,7 +16,7 @@ int _islower(int c)
 	r = islower(c);
 
 	if (r == 0)
-		return (0);
-	else
 		return (1);
+	else
+		return (0);
 }

@@ -3,7 +3,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * _islower - Entry point
+ * _isalpha - Entry point
  *
  * Return: Always int
  * @c: Param

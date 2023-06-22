@@ -4,7 +4,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * print_sign - Entry point
+ * print_to_98 - Entry point
  *
  * Return: Always int
  * @n: Param

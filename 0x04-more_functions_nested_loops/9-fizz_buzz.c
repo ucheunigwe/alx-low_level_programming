@@ -8,7 +8,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main (void)
+int main(void)
 {
 	int j;
 
@@ -24,10 +24,9 @@ int main (void)
 			if (j % 5 == 0)
 				printf("Buzz");
 		}
-		putchar(' ');
+		printf(" ");
 		j++;
 	}
-	
-	putchar('\n');
+	printf("\n");
 	return (0);
 }

@@ -5,9 +5,10 @@
 /**
  * _strlen - Entry point
  *
+ * Return: Always int
  * @s: Param
  */
 int _strlen(char *s)
 {
-	return strlen(s);
+	return (strlen(s));
 }

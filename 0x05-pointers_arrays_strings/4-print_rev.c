@@ -4,7 +4,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * print _rev - Entry point
+ * print_rev - Entry point
  *
  * @s: Param
  */

@@ -13,7 +13,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *i;
+	/*char *i;
 
 	i = s;
 
@@ -23,6 +23,6 @@ char *_strchr(char *s, char c)
 			return (i);
 		i = i + 1;
 	}
-	i = NULL;
-	return (i);
+	i = NULL;*/
+	return (strchr(s, c));
 }

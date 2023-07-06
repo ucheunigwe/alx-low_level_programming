@@ -27,7 +27,9 @@ int _strlen_recursion(char *s)
  * palind - Entry point
  *
  * @s: Param
+ * @n: Param
  *
+ * Return: Enter
  */
 int palind(char *s, int n)
 {
@@ -40,7 +42,7 @@ int palind(char *s, int n)
 	}
 	else
 	{
-		if (*s == *(s +j))
+		if (*s == *(s + j))
 			r = palind(s + 1, n - 2);
 	}
 	return (r);

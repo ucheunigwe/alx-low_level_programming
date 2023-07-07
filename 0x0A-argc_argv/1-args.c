@@ -8,10 +8,11 @@
  * @argc: Param
  * @argv: Param
  *
+ * Return: Always Success
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	if (argv[0] != NULL)
 		printf("%d\n", argc);
-	return(0);
+	return (0);
 }

@@ -8,6 +8,7 @@
  * @argc: Param
  * @argv: Param
  *
+ * Return: Always Success
  */
 int main(int argc, char *argv[])
 {

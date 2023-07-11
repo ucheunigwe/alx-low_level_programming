@@ -4,7 +4,7 @@
 /* more headers goes there */
 /* betty style doc for function main goes there */
 /**
- * _strdup - Entry point
+ * str_concat - Entry point
  *
  * @s1: Param
  * @s2: Param
@@ -33,12 +33,12 @@ char *str_concat(char *s1, char *s2)
 		{
 			*(cpy + i) = *(s1 + i);
 		}
-		
+
 		for (i = 0; i < n2; i++)
 		{
 			*(cpy + n1 + i) = *(s2 + i);
 		}
-		
+
 		*(cpy + n1 + n2) = '\0';
 	}
 

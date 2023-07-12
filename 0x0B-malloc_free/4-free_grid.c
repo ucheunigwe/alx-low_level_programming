@@ -4,7 +4,7 @@
 
 
 /**
- * dealocate_grid - Entry point
+ * free_grid - Entry point
  *
  * @j: position of row in grid
  * @ptr: the entire grid

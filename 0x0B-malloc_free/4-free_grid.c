@@ -13,15 +13,17 @@ void free_grid(int **ptr, int j)
 {
 	int *cpy;
 
-	if (j == 0)
+	if (ptr != NULL)
 	{
-		free(*ptr);
-		free(ptr);
-	}
-	else
-	{
-		cpy = *(ptr + j - 1);
-		free_grid(ptr, j - 1);
-		free(cpy);
+		if (j == 0)
+		{
+			free(ptr);
+		}
+		else
+		{
+			cpy = *(ptr + j - 1);
+			free_grid(ptr, j - 1);
+			free(cpy);
+		}
 	}
 }

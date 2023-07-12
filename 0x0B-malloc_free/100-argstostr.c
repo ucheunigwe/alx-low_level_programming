@@ -27,13 +27,16 @@ char *argstostr(int ac, char **av)
 			len += (int) strlen(*(av + i));
 		}
 		cpy = malloc((len * sizeof(char) + ac));
-		*cpy = '\0';
-		for (i = 0; i < ac; i++)
+		if (cpy)
 		{
-			strcat(cpy, *(av + i));
-			len = (int) strlen(cpy);
-			if (len != 0)
-				*(cpy + len) = '\n';
+			*cpy = '\0';
+			for (i = 0; i < ac; i++)
+			{
+				strcat(cpy, *(av + i));
+				len = (int) strlen(cpy);
+				if (len != 0)
+					*(cpy + len) = '\n';
+			}
 		}
 
 	}

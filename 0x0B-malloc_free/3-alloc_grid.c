@@ -7,10 +7,7 @@
  * dealocate_grid - Entry point
  *
  * @j: position of row in grid
- * @cpy: pointer to row to be populated
  * @ptr: the entire grid
- *
- * 
  */
 void dealocate_grid(int **ptr, int j)
 {
@@ -18,15 +15,15 @@ void dealocate_grid(int **ptr, int j)
 
 	if (j == 0)
 	{
-		free (*ptr);
-		free (ptr);
+		free(*ptr);
+		free(ptr);
 		ptr = NULL;
 	}
 	else
 	{
 		cpy = *(ptr + j - 1);
 		dealocate_grid(ptr, j - 1);
-		free (cpy);
+		free(cpy);
 	}
 }
 
@@ -38,8 +35,6 @@ void dealocate_grid(int **ptr, int j)
  * @j: position of row in grid
  * @cpy: pointer to row to be populated
  * @ptr: the entire grid
- *
- * 
  */
 void pop_row(int **ptr, int *cpy, int width, int j)
 {

@@ -5,15 +5,18 @@
 #endif
 
 /**
- * print_dog - check the code
+ * new_dog - check the code
  *
- * @d: Param
+ * @name: Param
+ * @age: Param
+ * @owner: Param
+ * Return: pointer
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
 
-	d = malloc(sizeof(dog_t*));
+	d = malloc(sizeof(dog_t *));
 	if (d)
 	{
 		d->name = name;

@@ -2,6 +2,7 @@
 #define du
 #include "dog.h"
 #include <stdlib.h>
+#include <string.h>
 #endif
 
 /**
@@ -19,9 +20,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d = malloc(sizeof(dog_t *));
 	if (d)
 	{
-		d->name = name;
+		char *name1 = strdup(name);
+		char *owner1 = strdup(owner);
+
+		d->name = name1;
 		d->age = age;
-		d->owner = owner;
+		d->owner = owner1;
 	}
 	return (d);
 }

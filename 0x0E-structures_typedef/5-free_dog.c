@@ -5,7 +5,7 @@
 #endif
 
 /**
- * new_dog - check the code
+ * free_dog - check the code
  *
  * @d: Param
  */

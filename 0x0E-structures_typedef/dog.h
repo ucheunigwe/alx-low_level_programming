@@ -1,7 +1,7 @@
 #ifndef foo
 #define foo
 /**
- * struct my_struct - Short description
+ * struct dog - Short description
  * @name: First member
  * @age: Second member
  * @owner: Third member

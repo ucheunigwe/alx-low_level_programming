@@ -2,7 +2,7 @@
 /* more headers goes there */
 /* betty style doc for function main goes there */
 /**
- * print_name - Entry point
+ * array_iterator - Entry point
  *
  * @array: Param
  * @size: Param

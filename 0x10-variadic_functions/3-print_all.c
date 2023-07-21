@@ -63,31 +63,10 @@ void print_all(const char * const format, ...)
 	va_start(param, format);
 	while (format[i])
 	{
-		switch (format[i])
-		{
-			case 'c':
-				{
-					print_number(format[i], va_arg(param, int), i, count);
-					break;
-				}
-			case 'i':
-				{
-					print_number(format[i], va_arg(param, int), i, count);
-					break;
-				}
-			case 'f':
-				{
-					print_number(format[i], va_arg(param, double), i, count);
-					break;
-				}
-			case 's':
-				{
-					print_string(format[i], va_arg(param, char*), i, count);
-					break;
-				}
-			default:
-				break;
-		}
+		if ((format[i] == 'c') || (format[i] == 'i') || (format[i] == 'f'))
+			print_number(format[i], va_arg(param, int), i, count);
+		if (format[i] == 's')
+			print_string(format[i], va_arg(param, char*), i, count);
 		i++;
 	}
 	va_end(param);

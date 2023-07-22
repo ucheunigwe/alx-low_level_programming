@@ -15,6 +15,11 @@ void print_all(const char * const format, ...)
 	char *str, *sep = "";
 	int i = 0;
 
+	if (format == NULL)
+	{
+		printf("(nil)\n");
+		return;
+	}
 	va_start(param, format);
 	while (format[i])
 	{
@@ -49,7 +54,7 @@ void print_all(const char * const format, ...)
 		}
 		sep = ", ";
 		i++;
+		va_end(param);
 	}
-	va_end(param);
 	printf("\n");
 }

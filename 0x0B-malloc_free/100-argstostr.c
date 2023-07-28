@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 		{
 			len += (int) strlen(*(av + i));
 		}
-		cpy = malloc((len * sizeof(char) + ac));
+		cpy = malloc((len * sizeof(char) + ac) + 1);
 		if (cpy)
 		{
 			*cpy = '\0';

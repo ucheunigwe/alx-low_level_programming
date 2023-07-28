@@ -44,6 +44,17 @@ int palind(char *s1, char *s2, int n)
 	{
 		if (*s1 == *s2)
 			r = palind(s1 + 1, s2 + 1, n - 1);
+		else if (*s2 == '*')
+		{
+			while (*s2 == '*')
+				s2 += 1;
+			if (*s1 == *s2)
+				r = palind(s1 + 1, s2 + 1, n - 1);
+			else
+				r = palind(s1 + 1, s2 - 1, n - 1);
+		}
+
+
 	}
 	return (r);
 }
@@ -65,9 +76,7 @@ int wildcmp(char *s1, char *s2)
 
 	c = _strlen_recursion(s1);
 	a = _strlen_recursion(s2);
-	if (c != a)
-		r = 0;
-	else if (c == 0 && a == 0)
+	if (c == 0 && a == 0)
 		r = 1;
 	else
 		r = palind(s1, s2, c);

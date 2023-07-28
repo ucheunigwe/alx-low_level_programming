@@ -21,6 +21,18 @@ int _strlen_recursion(char *s)
 	}
 }
 
+char *star (char *s)
+{
+	char *str;
+	if (*s != '*')
+		str = s;
+	else
+		str = star(s + 1);
+	return (str);
+}
+
+
+
 /* more headers goes there */
 /* betty style doc for function main goes there */
 /**
@@ -46,8 +58,7 @@ int palind(char *s1, char *s2, int n)
 			r = palind(s1 + 1, s2 + 1, n - 1);
 		else if (*s2 == '*')
 		{
-			while (*s2 == '*')
-				s2 += 1;
+			s2 = star(s2);
 			if (*s1 == *s2)
 				r = palind(s1 + 1, s2 + 1, n - 1);
 			else

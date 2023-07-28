@@ -5,6 +5,7 @@
  * add_end - prints the number of nodes in a linked list
  * @head: the linked list head
  * @temp: node to be added
+ * Return: Pointer to node
  */
 list_t *add_end(list_t **head, list_t **temp)
 {

@@ -1,4 +1,5 @@
-msg db "Hello, Holberton\n", 0
+msg db 'Hello, Holberton',10    ; The string to be printed
+
 global main
 extern printf
 
@@ -8,5 +9,4 @@ main:
 	call  printf
 	mov 	eax, 0
 	ret
-
 

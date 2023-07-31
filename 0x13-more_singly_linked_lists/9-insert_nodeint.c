@@ -36,7 +36,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index,
 
 	n = listint_len(*head);
 	if (n < index)
-		temp22 = NULL;
+		temp2 = NULL;
 	else
 	{
 		temp = *head;

@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * free_list - prints the number of nodes in a linked list
+ * free_listint - prints the number of nodes in a linked list
  * @head: pointer to the linked list
  */
 void free_listint(listint_t *head)

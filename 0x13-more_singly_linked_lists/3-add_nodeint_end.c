@@ -29,9 +29,9 @@ listint_t *add_end(listint_t **head, listint_t **temp)
 }
 
 /**
- * add_node_end - prints the number of nodes in a linked list
+ * add_nodeint_end - prints the number of nodes in a linked list
  * @head: pointer to the linked list head
- * @str: node string to be added
+ * @n: node string to be added
  * Return: Number of nodes in the list
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)

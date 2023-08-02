@@ -36,7 +36,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index,
 
 	n = listint_len(*head);
 	temp2 = malloc(sizeof(listint_t));
-	if ((n < index) || !temp2)
+	if ((n < index) || !temp2 || ((index > 0) && (!head || !*head)))
 		return (NULL);
 	temp2->n = data;
 	temp = *head;

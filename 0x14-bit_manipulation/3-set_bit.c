@@ -14,7 +14,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	unsigned long int cmp;
 
 	cmp = 1;
-	if (n == NULL)
+	if ((n == NULL) ||(index > 63))
 		return (-1);
 	cmp = cmp << index;
 	*n = *n | cmp;

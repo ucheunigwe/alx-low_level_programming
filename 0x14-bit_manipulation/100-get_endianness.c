@@ -10,8 +10,8 @@
 int get_endianness(void)
 {
 	int val = 0x01020304;
+	char *c = (char *)&val;
 
-	char * c = (char *)&val;
 	if (c[0] == 0x01)
 		return (0);
 	return (1);

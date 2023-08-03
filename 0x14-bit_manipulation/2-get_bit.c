@@ -13,6 +13,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int val, cmp;
 
+	if (index > 63)
+		return (-1);
 	n = n >> index;
 	cmp = 1;
 	val = n & cmp;

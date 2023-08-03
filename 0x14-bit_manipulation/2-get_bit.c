@@ -15,8 +15,6 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	n = n >> index;
 	cmp = 1;
-	if (n == 0)
-		return (-1);
 	val = n & cmp;
 	return (val);
 }

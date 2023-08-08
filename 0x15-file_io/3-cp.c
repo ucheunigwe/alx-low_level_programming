@@ -22,19 +22,16 @@ int cp_file(const char *filename, FILE *file_from)
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd < 0)
 		return (-1);
-
 	f = fdopen(fd, "w");
 	if (f == NULL)
 	{
 		close(fd);
 		return (-1);
 	}
-
 	if (file_from != NULL)
 	{
 		while ((c = fgetc(file_from)) != EOF)
 		{
-			
 			if (fwrite(&c, 1, 1, f) != 1)
 			{
 				fclose(f);
@@ -53,7 +50,6 @@ int cp_file(const char *filename, FILE *file_from)
 
 	fclose(f);
 	close(fd);
-
 	return (i);
 }
 
@@ -61,12 +57,14 @@ int cp_file(const char *filename, FILE *file_from)
  * main - check the code
  *
  * Return: Always 0.
+ * @ac: Param
+ * @av: param
  */
 int main(int ac, char **av)
 {
 	int res;
 	FILE *f;
-	
+
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: %s file_from file_to\n", av[0]);

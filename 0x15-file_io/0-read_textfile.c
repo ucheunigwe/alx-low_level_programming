@@ -7,7 +7,7 @@
  *
  * Return: the ineger result or zero(0) for invalid strings
  * @filename: Param
- * @lettes: Param
+ * @letters: Param
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {

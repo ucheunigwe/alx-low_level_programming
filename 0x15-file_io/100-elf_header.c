@@ -35,33 +35,31 @@ void read_elf_header(const char *file_path, ElfHeader *header) {
     fclose(file);
 }
 
-int main(int argc, char *argv[]) 
-{
-	const char *file_path = argv[1];
-	ElfHeader elf_header;
-    
-	if (argc != 2) {
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
         printf("Usage: %s <elf_file>\n", argv[0]);
         return 1;
     }
 
+    const char *file_path = argv[1];
+    ElfHeader elf_header;
     read_elf_header(file_path, &elf_header);
 
-    printf("ELF Header:\n");
-    printf("  Type:                             0x%x\n", elf_header.type);
-    printf("  Machine:                          0x%x\n", elf_header.machine);
-    printf("  Version:                          0x%x\n", elf_header.version);
-    printf("  Entry point address:              0x%x\n", elf_header.entry);
-    printf("  Start of program headers:         %u (bytes into file)\n", elf_header.phoff);
-    printf("  Start of section headers:         %u (bytes into file)\n", elf_header.shoff);
-    printf("  Flags:                            0x%x\n", elf_header.flags);
-    printf("  Size of this header:              %u (bytes)\n", elf_header.ehsize);
-    printf("  Size of program headers:          %u (bytes)\n", elf_header.phentsize);
-    printf("  Number of program headers:        %u\n", elf_header.phnum);
-    printf("  Size of section headers:          %u (bytes)\n", elf_header.shentsize);
-    printf("  Number of section headers:        %u\n", elf_header.shnum);
-    printf("  Section header string table index: %u\n", elf_header.shstrndx);
+    printf("Magic:             ");
+    for (int i = 0; i < 16; ++i) {
+        printf("%02x ", elf_header.ident[i]);
+    }
+    printf("\n");
+
+    printf("Class:             %u-bit\n", elf_header.ident[4] == 1 ? 32 : 64);
+    printf("Data:              %s\n", elf_header.ident[5] == 1 ? "little-endian" : "big-endian");
+    printf("Version:           %u\n", elf_header.version);
+    printf("OS/ABI:            %u\n", elf_header.ident[7]);
+    printf("ABI Version:       %u\n", elf_header.ident[8]);
+    printf("Type:              %u\n", elf_header.type);
+    printf("Entry point:       0x%x\n", elf_header.entry);
 
     return 0;
 }
+
 

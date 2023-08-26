@@ -67,13 +67,13 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: %s file_from file_to\n", av[0]);
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	f = fopen(av[1], "r");
 	if (f == NULL)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		dprintf(1, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	res = cp_file(av[2], f);

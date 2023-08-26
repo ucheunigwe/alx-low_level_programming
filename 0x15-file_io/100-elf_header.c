@@ -38,6 +38,7 @@ void read_elf_header(const char *file_path, ElfHeader *header) {
 int main(int argc, char *argv[]) {
 	 const char *file_path = argv[1];
 	 ElfHeader elf_header;
+	 int i;
     if (argc != 2) {
         printf("Usage: %s <elf_file>\n", argv[0]);
         return 1;
@@ -46,7 +47,7 @@ int main(int argc, char *argv[]) {
     read_elf_header(file_path, &elf_header);
 
     printf("Magic:             ");
-    for (int i = 0; i < 16; ++i) {
+    for (i = 0; i < 16; ++i) {
         printf("%02x ", elf_header.ident[i]);
     }
     printf("\n");
